@@ -1,0 +1,30 @@
+let career=[]
+function mintNFT (field,scope,timeline ){
+
+  const nft={
+
+  "field" : field,"scope":scope,"timeline":timeline
+};
+
+career.push(nft);
+console.log("minted: "+ field);
+}
+function listNFTs(){
+  for(let i=0;i<career.length;i++){
+    console.log("\nfield"+ career[i].field);
+    console.log("scope"+ career[i].scope);
+    console.log("timeline"+ career[i].timeline); 
+  }
+}
+
+function getTotalSupply(){
+  console.log("\n"+career.length); 
+
+}
+
+mintNFT(" Engineer"," Medium"," 4_years");
+mintNFT(" Doctor"," High"," 5_years");
+mintNFT(" BCom"," Low"," 3_years");
+
+listNFTs();
+getTotalSupply();
